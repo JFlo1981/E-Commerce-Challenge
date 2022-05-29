@@ -77,11 +77,11 @@ router.delete('/:id', (req, res) => {
     },
   })
   .then((dbTagdata) => {
-    if (!dbTagdata) {
-      res.status(404)
-      .json({ message: 'No Tag found with this id' });
-      return;
-    }
+    // if (!dbTagdata) {
+    //   res.status(404)
+    //   .json({ message: 'No Tag found with this id' });
+    //   return;
+    // }
     res.json(dbTagdata);
   })
   .catch((err) => {
