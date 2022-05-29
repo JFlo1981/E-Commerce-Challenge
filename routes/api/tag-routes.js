@@ -77,7 +77,7 @@ router.delete('/:id', (req, res) => {
     },
   })
   .then((dbTagdata) => {
-    if (!dbTagdata[0]) {
+    if (!dbTagdata) {
       res.status(404)
       .json({ message: 'No Tag found with this id' });
       return;
